@@ -122,8 +122,11 @@ export const CommicContainer = styled.div`
       }
     }
     @media (max-width: 960px) {
-      margin-left: 50px;
-      width: calc(100% - 50px);
+      margin-left: 20px;
+      width: calc(100% - 20px);
+      .comics-body-content::-webkit-scrollbar {
+        display: none;
+      }
     }
     @media (max-width: 951px) {
       .comics-body-content .commics-content {
