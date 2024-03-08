@@ -5,6 +5,8 @@
 App shows a list of marvel heroes, clicking on a hero shows the details of the hero and the related comics, the app provides a search engine where you can search for all the super
 heroes that begin with the intruduced data, you can add or remove to favorites the heroes that you require and in the favorites view you can see all the heroes added.
 
+## NODE version 18 >
+
 ## Stats
 
 - styled-component
