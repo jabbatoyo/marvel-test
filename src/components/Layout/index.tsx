@@ -1,11 +1,13 @@
-import { Container } from "./Layout.styles";
-import { Header, LoadingIcon, Search } from "..";
 import {
   Outlet,
   useLocation,
   useNavigation,
   useParams,
 } from "react-router-dom";
+//components
+import { Header, LoadingIcon, Search } from "..";
+//styles
+import { Container } from "./Layout.styles";
 
 const Layout = () => {
   const { pathname } = useLocation();
