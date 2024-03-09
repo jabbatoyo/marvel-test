@@ -27,14 +27,14 @@ const Card = ({
         {isFavourites(id, favourites) ? (
           <HeartIcon
             onClick={() => removeFavourites(id)}
-            data-testid="heart-added-favourite"
+            data-testid="heart-removed-favourite"
             color={colorRed}
             isChecked
           />
         ) : (
           <HeartIcon
             onClick={() => addFavourites(id)}
-            data-testid="heart-remove-favourite"
+            data-testid="heart-added-favourite"
             color={colorWhite}
             isChecked={false}
           />
