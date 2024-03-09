@@ -99,10 +99,10 @@ export const CommicContainer = styled.div`
       padding-bottom: 10px;
       &::-webkit-scrollbar {
         height: 10px;
-        background: ${colorRed};
+        background: #d9d9d9;
       }
       &::-webkit-scrollbar-thumb {
-        background: #ec1d24;
+        background: ${colorRed};
       }
       .commics-content {
         flex: 0 0 100%;
