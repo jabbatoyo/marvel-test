@@ -1,6 +1,8 @@
 import { useLoaderData, useLocation } from "react-router-dom";
-import { DataDto } from "../api";
+//customHook
 import { useFavouriteContext } from "../context/favouritesContext";
+//types
+import { DataDto } from "../api";
 
 function useCharacters() {
   const { pathname } = useLocation();

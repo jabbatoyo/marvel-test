@@ -40,14 +40,14 @@ describe("Card test container", () => {
   });
 
   test("action add fovourite clicked and show button remove favourite", () => {
-    const removeFavourite = screen.getByTestId("heart-removed-favourite");
-    fireEvent.click(removeFavourite);
-    expect(screen.getByTestId("heart-added-favourite")).toBeDefined();
-  });
-
-  test("action remove favourite is clicked and show button add favourite", () => {
     const removeFavourite = screen.getByTestId("heart-added-favourite");
     fireEvent.click(removeFavourite);
     expect(screen.getByTestId("heart-removed-favourite")).toBeDefined();
+  });
+
+  test("action remove favourite is clicked and show button add favourite", () => {
+    const removeFavourite = screen.getByTestId("heart-removed-favourite");
+    fireEvent.click(removeFavourite);
+    expect(screen.getByTestId("heart-added-favourite")).toBeDefined();
   });
 });

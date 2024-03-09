@@ -1,10 +1,15 @@
-import { Container } from "./header.styles";
-
+import { Link } from "react-router-dom";
+//customHooks
+import { useFavouriteContext } from "../../context/favouritesContext";
+//components
+import { HeartIcon } from "..";
 //logo
 import logo from "../../assets/logo.png";
-import { HeartRedIcon } from "..";
-import { Link } from "react-router-dom";
-import { useFavouriteContext } from "../../context/favouritesContext";
+//contants
+import { colorRed } from "../../config/constants";
+
+//styles
+import { Container } from "./header.styles";
 
 const Header = () => {
   const { numberOfFavourites } = useFavouriteContext();
@@ -14,7 +19,7 @@ const Header = () => {
         <img src={logo} alt="logo" />
       </Link>
       <Link className="favorite-content" to="/favourites">
-        <HeartRedIcon />
+        <HeartIcon color={colorRed} isChecked />
         <h3 data-testid="number-of-favourites">{numberOfFavourites}</h3>
       </Link>
     </Container>

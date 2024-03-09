@@ -1,9 +1,15 @@
-import { Container } from "./card.styles";
-import { HeartRedIcon, HeartWhiteIcon } from "..";
+import { Link } from "react-router-dom";
+//customHooks
+import { useFavouriteContext } from "../../context/favouritesContext";
+//components
+import { HeartIcon } from "..";
+//types
 import { CharacterDto } from "../../api";
 import { isFavourites } from "../../api/utils/utilities";
-import { Link } from "react-router-dom";
-import { useFavouriteContext } from "../../context/favouritesContext";
+//contants
+import { colorRed, colorWhite } from "../../config/constants";
+//styles
+import { Container } from "./card.styles";
 
 const Card = ({
   character: { id, thumbnail, name },
@@ -16,13 +22,22 @@ const Card = ({
       <Link className="img-container" to={`/character/${id}`}>
         <img src={`${thumbnail.path}.${thumbnail.extension}`} alt={name} />
       </Link>
-      <hr className="sepatator-line" />
       <div className="footer">
         <h2>{name}</h2>
         {isFavourites(id, favourites) ? (
-          <HeartRedIcon onClick={() => removeFavourites(id)} />
+          <HeartIcon
+            onClick={() => removeFavourites(id)}
+            data-testid="heart-removed-favourite"
+            color={colorRed}
+            isChecked
+          />
         ) : (
-          <HeartWhiteIcon onClick={() => addFavourites(id)} />
+          <HeartIcon
+            onClick={() => addFavourites(id)}
+            data-testid="heart-added-favourite"
+            color={colorWhite}
+            isChecked={false}
+          />
         )}
       </div>
     </Container>

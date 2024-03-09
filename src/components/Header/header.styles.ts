@@ -1,4 +1,6 @@
 import styled from "styled-components";
+//contants
+import { colorBlack, colorWhite } from "../../config/constants";
 
 export const Container = styled.div`
   display: flex;
@@ -6,7 +8,7 @@ export const Container = styled.div`
   align-items: center;
   width: calc(100% - 96px);
   padding: 16px 48px 16px 48px;
-  background-color: #000000;
+  background-color: ${colorBlack};
   border-bottom: solid 1px #333333;
   .link-content {
     text-decoration: none;
@@ -19,7 +21,7 @@ export const Container = styled.div`
     display: flex;
     h3 {
       padding: 0px 0px 0px 10px;
-      color: white;
+      color: ${colorWhite};
       margin: 0;
     }
   }

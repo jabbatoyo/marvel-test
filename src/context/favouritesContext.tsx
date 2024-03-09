@@ -1,4 +1,5 @@
 import { ReactNode, createContext, useContext, useState } from "react";
+//types
 import { FavouritesDto } from "../api";
 
 type AppContextProviderProps = {

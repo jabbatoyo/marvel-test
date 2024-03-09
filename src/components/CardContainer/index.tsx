@@ -1,7 +1,11 @@
-import { Container } from "./cardContainer.styles";
-import { Card } from "..";
-import { CharacterDto } from "../../api";
+//customHooks
 import useCharacters from "../../hooks/useCharacters";
+//components
+import { Card } from "..";
+//types
+import { CharacterDto } from "../../api";
+//styles
+import { Container } from "./cardContainer.styles";
 
 const CardContainer = () => {
   const { characters } = useCharacters();

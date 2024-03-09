@@ -1,9 +1,12 @@
 //components
-import { HeartRedIcon, HeartWhiteIcon } from "../../../components";
+import { HeartIcon } from "../../../components";
 
 //types
 import { CharacterDto, FavouritesDto } from "../../../api";
 import { isFavourites } from "../../../api/utils/utilities";
+
+//contants
+import { colorRed, colorWhite } from "../../../config/constants";
 
 //styles
 import { DetailCardContainer } from "./detail.styles";
@@ -34,9 +37,19 @@ const DetailCard = ({
           <div className="name-content-with-heart">
             <h1>{character?.name}</h1>
             {isFavourites(character.id, favourites) ? (
-              <HeartRedIcon onClick={() => removeFavourites(character.id)} />
+              <HeartIcon
+                onClick={() => removeFavourites(character.id)}
+                data-testid="heart-removed-favourite"
+                color={colorRed}
+                isChecked
+              />
             ) : (
-              <HeartWhiteIcon onClick={() => addFavourites(character.id)} />
+              <HeartIcon
+                onClick={() => addFavourites(character.id)}
+                data-testid="heart-added-favourite"
+                color={colorWhite}
+                isChecked={false}
+              />
             )}
           </div>
           <div className="description-content">

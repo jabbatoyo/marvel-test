@@ -39,6 +39,6 @@ describe("COMICS test container", () => {
   });
 
   test("Favourite icon added is in view", () => {
-    expect(screen.getByTestId("heart-added-favourite")).toBeDefined();
+    expect(screen.getByTestId("heart-removed-favourite")).toBeDefined();
   });
 });
