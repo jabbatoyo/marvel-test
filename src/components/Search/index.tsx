@@ -1,5 +1,8 @@
+//customHooks
 import useSearch from "../../hooks/useSearch";
+//components
 import SearchIcon from "../Icons/SearchIcon";
+//styles
 import { Container } from "./search.styles";
 
 const Search = () => {
