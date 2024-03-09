@@ -16,7 +16,7 @@ heroes that begin with the intruduced data, you can add or remove to favorites t
 - msw
 - vitest
 - eslint
-- jsdom0
+- jsdom
 
 ## Folder structure
 
