@@ -1,7 +1,9 @@
 import styled from "styled-components";
+//constants
+import { colorBlack, colorRed, colorWhite } from "../../../config/constants";
 
 export const DetailCardContainer = styled.div`
-  background-color: #000;
+  background-color: ${colorBlack};
   display: flex;
   justify-content: center;
   clip-path: polygon(
@@ -37,7 +39,7 @@ export const DetailCardContainer = styled.div`
         align-items: center;
         h1 {
           width: calc(100% - 32px);
-          color: #fff;
+          color: ${colorWhite};
           font-size: 40px;
           font-weight: 700;
           margin: 0px 10px 0px 0px;
@@ -46,7 +48,7 @@ export const DetailCardContainer = styled.div`
       .description-content {
         p {
           font-size: 16px;
-          color: #fff;
+          color: ${colorWhite};
         }
       }
       @media (max-width: 1000px) {
@@ -97,7 +99,7 @@ export const CommicContainer = styled.div`
       padding-bottom: 10px;
       &::-webkit-scrollbar {
         height: 10px;
-        background: #d9d9d9;
+        background: ${colorRed};
       }
       &::-webkit-scrollbar-thumb {
         background: #ec1d24;
@@ -110,7 +112,7 @@ export const CommicContainer = styled.div`
           height: 300px;
         }
         h2 {
-          color: #000;
+          color: ${colorBlack};
           font-size: 16px;
           font-weight: 500;
           line-height: 18px;
