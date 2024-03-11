@@ -8,11 +8,12 @@ import { FavouriteProvider } from "./context/favouritesContext.tsx";
 
 //styles
 import "./main.css";
+import { Layout } from "./components/index.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <FavouriteProvider>
-      <RouterProvider router={createAppRouter()} />
+      <RouterProvider fallbackElement={<Layout />} router={createAppRouter()} />
     </FavouriteProvider>
   </React.StrictMode>
 );

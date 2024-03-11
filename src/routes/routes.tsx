@@ -3,6 +3,7 @@ import { RouteObject } from "react-router-dom";
 import { LoaderCharacters, LoaderDetailCharacterAndCommics } from "./loaders";
 import { Layout } from "../components";
 import DetailPage from "../pages/DetailPage";
+import NotFoundPage from "../pages/NotFoundPage";
 
 export const BASE_URL = "/";
 
@@ -27,6 +28,10 @@ const routes: RouteObject[] = [
         loader: LoaderDetailCharacterAndCommics,
       },
     ],
+  },
+  {
+    path: `*`,
+    element: <NotFoundPage />,
   },
 ];
 
